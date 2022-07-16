@@ -1,6 +1,7 @@
 class MainController < ApplicationController
   def index
     @location = location_params
+    @data = WeatherService.new(@location).values
   end
 
   private

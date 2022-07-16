@@ -40,7 +40,7 @@ RSpec.describe 'Home page and search results', type: :feature do
       fill_in 'location', with: 'spjglklilfjflklfk'
       click_button 'GO'
 
-      expect(page).to have_text 'No result for location spjglklilfjflklfk'
+      expect(page).to have_text "couldn't find that"
       card_layout_should_be_in page
       search_layout_should_be_in page
     end

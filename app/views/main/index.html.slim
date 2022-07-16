@@ -1,26 +1,26 @@
 .main
   .location-name 
-    = @location
+    = @data[:name]
   .temperature 
     .
       =
     . 
-      = "#{}°"
+      = "#{@data[:temperature]}°"
   .
     | feels like 
     span 
-      = "#{}°"
+      = "#{@data[:feels_like]}°"
 
 .sub 
   .
     | humidity is 
     span
-      = "#{}%"
+      = "#{@data[:humidity]}%"
   . 
     | pressure is 
     span
-      = "#{} hPa"
+      = "#{@data[:pressure]} hPa"
   .
     | visibility is 
     span 
-      = "#{}"
+      = "#{@data[:visibility]}"
