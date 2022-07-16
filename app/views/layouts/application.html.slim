@@ -9,4 +9,13 @@ html
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
   body
-    = yield
+    .search-area 
+      .bgk 
+        = form_with method: :get do |form|
+          = form.select :unit, %w[°C °F]
+          = form.text_field :location, placeholder: 'search location'
+          = form.submit "GO"
+    .weather-report
+      = yield
+    .footer 
+      | &copy Chris Oluwafemi Adebiyi
