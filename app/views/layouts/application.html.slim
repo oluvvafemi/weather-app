@@ -12,7 +12,7 @@ html
     .search-area 
       .bgk 
         = form_with method: :get do |form|
-          = form.select :unit, %w[°C °F]
+          = form.select :unit, [['°C', 'metric'],  ['°F', 'imperial']]
           = form.text_field :location, placeholder: 'search location'
           = form.submit "GO"
     .weather-report

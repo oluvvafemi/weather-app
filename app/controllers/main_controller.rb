@@ -1,7 +1,6 @@
 class MainController < ApplicationController
   def index
-    @location = location_params
-    @data = WeatherService.new(@location).values
+    @data = WeatherService.new(location_params, params[:unit]).values
   end
 
   private

@@ -1,6 +1,7 @@
 class WeatherService
-  def initialize(location)
+  def initialize(location, unit)
     @location = location
+    @unit = %w[metric imperial].include?(unit) ? unit : 'metric'
   end
 
   def values
@@ -15,7 +16,7 @@ class WeatherService
   private
 
   def fetch_weather
-    response = HTTP.get("https://api.openweathermap.org/data/2.5/weather?q=#{@location}&units=metric&appid=#{Rails.configuration.open_weather[:app_id]}")
+    response = HTTP.get("https://api.openweathermap.org/data/2.5/weather?q=#{@location}&units=#{@unit}&appid=#{Rails.configuration.open_weather[:app_id]}")
     @response_data = JSON.parse(response.to_s)
   end
 
