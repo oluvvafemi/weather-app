@@ -60,6 +60,10 @@ select, input {
 
 select {
   opacity: 0.5;
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+	-moz-appearance: none;
+  cursor: pointer;
 }
 input[type=submit] {
   cursor: pointer;
