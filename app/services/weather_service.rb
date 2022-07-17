@@ -27,7 +27,8 @@ class WeatherService
       humidity: @response_data['main']['humidity'],
       pressure: @response_data['main']['pressure'],
       visibility: @response_data['visibility'],
-      feels_like: @response_data['main']['feels_like']
+      feels_like: @response_data['main']['feels_like'],
+      icon_src: "https://openweathermap.org/img/wn/#{@response_data['weather'][0]['icon']}@2x.png"
     }
   end
 
@@ -38,7 +39,8 @@ class WeatherService
       humidity: '',
       pressure: '',
       visibility: '',
-      feels_like: ''
+      feels_like: '',
+      icon_src: nil
     }
   end
 end

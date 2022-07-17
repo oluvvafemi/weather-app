@@ -3,7 +3,7 @@
     = @data[:name]
   .temperature 
     .
-      =
+      = image_tag(@data[:icon_src] || image_url('sad_emoji.png'))
     . 
       = "#{@data[:temperature]}°"
   .
