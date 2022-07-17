@@ -141,6 +141,8 @@ input[type=text] {
 @media  (max-width:600px) {
   .search-area {
     width: 90vw;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .weather-report {
     width: 70vw;
