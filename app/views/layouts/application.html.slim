@@ -7,7 +7,7 @@ html
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag "application", 
-      "https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap",
+      "https://fonts.googleapis.com/css2?family=Ubuntu&display=swap",
       "data-turbo-track": "reload"
     = javascript_importmap_tags
   body style = "background-image: url(#{@background_photo || image_url('background_default.jpg')});"
