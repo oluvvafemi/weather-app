@@ -1,6 +1,7 @@
 class MainController < ApplicationController
   def index
     @data = WeatherService.new(location_params, params[:unit]).values
+    @background_photo = PhotoService.new(@data[:name]).photo_url
   end
 
   private

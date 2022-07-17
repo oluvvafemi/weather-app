@@ -40,3 +40,4 @@
 # Ignore env variables
 /config/open_weather.yml
 /config/ip_info.yml
+/config/unsplash.yml

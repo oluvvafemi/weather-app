@@ -8,7 +8,7 @@ html
     = csp_meta_tag
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
-  body
+  body style = "background-image: url(#{@background_photo || image_url('background_default.jpg')});"
     .search-area 
       .bgk 
         = form_with method: :get do |form|

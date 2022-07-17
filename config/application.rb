@@ -13,5 +13,6 @@ module Weather
 
     config.open_weather = config_for(:open_weather)
     config.ip_info = config_for(:ip_info)
+    config.unsplash = config_for(:unsplash)
   end
 end
