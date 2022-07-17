@@ -6,21 +6,24 @@
       = image_tag(@data[:icon_src] || image_url('sad_emoji.png'))
     . 
       = "#{@data[:temperature]}°"
-  .
+  .feel-like
     | feels like 
     span 
       = "#{@data[:feels_like]}°"
 
 .sub 
   .
-    | humidity is 
-    span
+    span class='label'
+      | humidity is 
+    span class='sub-values'
       = "#{@data[:humidity]}%"
-  . 
-    | pressure is 
-    span
+  .
+    span class='label' 
+      | pressure is 
+    span class='sub-values'
       = "#{@data[:pressure]} hPa"
   .
-    | visibility is 
-    span 
+    span class='label'
+      | visibility is 
+    span class='sub-values'
       = "#{@data[:visibility]}"

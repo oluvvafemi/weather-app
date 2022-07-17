@@ -26,7 +26,11 @@ body, input, textarea, button, select {
 
 .content {
   flex: 1 0 auto;
-  margin-top: 80px;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
 }
 
 .footer {
@@ -40,6 +44,7 @@ body, input, textarea, button, select {
   width: 70vw;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 select, input {
@@ -64,10 +69,70 @@ input[type=text] {
   text-align: center;
   padding: 0 10vw;
 }
-    
+
+.weather-report {
+  background-color: #D9E2EC;
+  color: #243B53;
+  border-radius: 20px;
+  width: 320px;
+  box-sizing: border-box;
+}
+
+.main {
+  padding: 20px 40px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.location-name {
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.feel-like {
+  color: #CB6E17;
+}
+
+.temperature {
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+  font-weight: lighter;
+  gap: 10px;
+  opacity: 0.7;
+}
+
+.sub {
+  padding: 30px;
+  background-color: #BCCCDC;
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sub .label {
+  opacity: .65;
+}
+
+.sub-values {
+  font-weight: bolder;
+}
+
 @media  (max-width:600px) {
   .search-area {
-    width: 80vw;
+    width: 90vw;
+  }
+  .weather-report {
+    width: 70vw;
+  }
+  .location-name {
+    font-size: 18px;
+  }
+  .temperature {
+    font-size: 20px;
   }
 }
 
