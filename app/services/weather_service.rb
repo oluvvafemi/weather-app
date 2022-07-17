@@ -23,11 +23,11 @@ class WeatherService
   def success_data
     {
       name: @response_data['name'],
-      temperature: @response_data['main']['temp'],
+      temperature: @response_data['main']['temp'].round,
       humidity: @response_data['main']['humidity'],
       pressure: @response_data['main']['pressure'],
       visibility: @response_data['visibility'],
-      feels_like: @response_data['main']['feels_like'],
+      feels_like: @response_data['main']['feels_like'].round,
       icon_src: "https://openweathermap.org/img/wn/#{@response_data['weather'][0]['icon']}@2x.png"
     }
   end
