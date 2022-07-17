@@ -13,8 +13,8 @@ html
   body style = "background-image: url(#{@background_photo || image_url('background_default.jpg')});"
     .content
       = form_with method: :get,  html: {class: 'search-area', autocomplete:"off"} do |form|
-        = form.select :unit, [['°C', 'metric'],  ['°F', 'imperial']]
-        = form.text_field :location, placeholder: 'try a different location'
+        = form.select :unit, [['°C', 'metric'],  ['°F', 'imperial']], selected: params[:unit] 
+        = form.text_field :location, placeholder: 'try a different location', value: params[:location]
         = form.submit "GO"
       .weather-report
         = yield
