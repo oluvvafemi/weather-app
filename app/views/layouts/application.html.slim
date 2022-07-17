@@ -6,16 +6,19 @@ html
     meta[name="viewport" content="width=device-width,initial-scale=1"]
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = stylesheet_link_tag "application", 
+      "https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap",
+      "data-turbo-track": "reload"
     = javascript_importmap_tags
   body style = "background-image: url(#{@background_photo || image_url('background_default.jpg')});"
-    .search-area 
-      .bgk 
-        = form_with method: :get do |form|
-          = form.select :unit, [['°C', 'metric'],  ['°F', 'imperial']]
-          = form.text_field :location, placeholder: 'search location'
-          = form.submit "GO"
-    .weather-report
-      = yield
+    .content
+      .search-area 
+        .bgk 
+          = form_with method: :get do |form|
+            = form.select :unit, [['°C', 'metric'],  ['°F', 'imperial']]
+            = form.text_field :location, placeholder: 'search location'
+            = form.submit "GO"
+      .weather-report
+        = yield
     .footer 
       | &copy Chris Oluwafemi Adebiyi

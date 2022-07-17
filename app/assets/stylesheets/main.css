@@ -4,11 +4,30 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  color: #D9E2EC;
+  align-items: center;
 }
+
 body:after { 
   content: "";
   position: absolute;
   background: rgba(0, 0, 0, 0.55); 
   top: 0; bottom: 0; left: 0; right: 0; 
   z-index: -1;
+}
+
+body, input, textarea, button, select {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
 }
