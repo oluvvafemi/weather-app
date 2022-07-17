@@ -12,12 +12,10 @@ html
     = javascript_importmap_tags
   body style = "background-image: url(#{@background_photo || image_url('background_default.jpg')});"
     .content
-      .search-area 
-        .bgk 
-          = form_with method: :get do |form|
-            = form.select :unit, [['°C', 'metric'],  ['°F', 'imperial']]
-            = form.text_field :location, placeholder: 'search location'
-            = form.submit "GO"
+      = form_with method: :get,  html: {class: 'search-area', autocomplete:"off"} do |form|
+        = form.select :unit, [['°C', 'metric'],  ['°F', 'imperial']]
+        = form.text_field :location, placeholder: 'try a different location'
+        = form.submit "GO"
       .weather-report
         = yield
     .footer 

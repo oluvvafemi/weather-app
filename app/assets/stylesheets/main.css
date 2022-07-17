@@ -26,8 +26,53 @@ body, input, textarea, button, select {
 
 .content {
   flex: 1 0 auto;
+  margin-top: 80px;
 }
 
 .footer {
   flex-shrink: 0;
+}
+
+.search-area {
+  background-color: #D9E2EC;
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+select, input {
+  border: none;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  overflow: hidden;
+  outline: none;
+}
+
+select {
+  opacity: 0.5;
+}
+input[type=submit] {
+  cursor: pointer;
+  padding: 0;
+  font-weight: bolder;
+  color: #003E6B;
+}
+
+input[type=text] {
+  text-align: center;
+  padding: 0 10vw;
+}
+    
+@media  (max-width:600px) {
+  .search-area {
+    width: 80vw;
+  }
+}
+
+@media (min-width:80em){
+  .search-area {
+    width: 700px;
+  }
 }
