@@ -16,6 +16,6 @@ class MainController < ApplicationController
 
   def default_location
     ipinfo ||= request.env['ipinfo'].all
-    @default_location ||= ipinfo.key?(:city) ? ipinfo.city : 'Antarctica'
+    @default_location ||= ipinfo.key?(:city) ? ipinfo[:city] : 'Antarctica'
   end
 end
