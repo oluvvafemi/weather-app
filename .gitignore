@@ -34,9 +34,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-# Ignore database config
-/config/database.yml
-
 # Ignore env variables
 /config/open_weather.yml
 /config/ip_info.yml
