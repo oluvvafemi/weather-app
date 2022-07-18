@@ -10,9 +10,5 @@ module Weather
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-
-    config.open_weather = config_for(:open_weather)
-    config.ip_info = config_for(:ip_info)
-    config.unsplash = config_for(:unsplash)
   end
 end
